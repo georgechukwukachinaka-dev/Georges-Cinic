@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Clinic - Quality Healthcare in Lagos</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+:root{--blue:#0e7490;--dark:#0a4a5e;--teal:#14b8a6;--light:#ecfeff}
+header{background:#fff;display:flex;justify-content:space-between;align-items:center;padding:16px 6%;position:sticky;top:0;box-shadow:0 2px 15px rgba(0,0,0,.08);z-index:10}
+.logo{font-size:24px;font-weight:900;color:var(--blue);line-height:1}
+.logo span{color:var(--teal);font-size:12px;letter-spacing:2px;display:block}
+nav a{margin:0 12px;text-decoration:none;color:#333;font-weight:600}
+.btn{background:var(--blue);color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+.btn-green{background:#25D366;color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:700;border:none;cursor:pointer}
+.hero{display:flex;align-items:center;padding:50px 6%;background:var(--light);gap:40px;flex-wrap:wrap}
+.hero-text{flex:1;min-width:300px}
+.hero-text h1{font-size:46px;color:var(--dark);line-height:1.1}
+.hero-text p{margin:18px 0;color:#555;font-size:18px;line-height:1.6}
+.hero-img{flex:1;min-width:300px}
+.hero-img img{width:100%;border-radius:20px;height:420px;object-fit:cover}
+section{padding:60px 6%}
+h2{text-align:center;color:var(--dark);font-size:34px}
+.sub{text-align:center;color:#666;margin:10px 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#fff;border-radius:18px;padding:24px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.07);border:1px solid #eee}
+.card h3{margin:12px 0 6px;color:var(--dark)}
+.price{font-size:20px;font-weight:900;color:var(--blue);margin:10px 0}
+.emergency{background:#fef2f2;border:2px solid #fecaca;padding:25px;border-radius:18px;text-align:center}
+input,select,textarea{padding:13px 18px;border-radius:12px;border:1px solid #ddd;width:100%;margin:8px 0;font-size:15px}
+.book-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:1000px;margin:30px auto 0}
+.book-card{background:#fff;padding:30px;border-radius:20px;box-shadow:0 5px 20px rgba(0,0,0,.07)}
+.info-card{background:var(--blue);color:#fff;padding:30px;border-radius:20px}
+.info-card a{color:#fde68a;text-decoration:none;font-weight:700}
+.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.doc{background:#fff;padding:20px;border-radius:18px;text-align:center;box-shadow:0 5px 20px rgba(0,0,0,.07)}
+.doc img{width:100px;height:100px;border-radius:50%;object-fit:cover}
+footer{background:var(--dark);color:#fff;padding:40px 6%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px}
+footer a{color:#ddd;text-decoration:none;display:block;margin:6px 0}
+@media(max-width:700px){.hero-text h1{font-size:32px} nav{display:none} .book-wrap{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+  <div style="display:flex;align-items:center;gap:10px">
+  <img src="logo.png" style="width:55px;height:55px;border-radius:12px;object-fit:cover">
+  <div class="logo">✚ GEORGE'S CLINIC<span>QUALITY HEALTHCARE • LAGOS</span></div>
+</div>
+  <nav><a href="#">Home</a><a href="#services">Services</a><a href="#doctors">Doctors</a><a href="#book">Book</a></nav>
+  <a href="#book" class="btn">Book Appointment →</a>
+</header>
+<div class="hero">
+  <div class="hero-text">
+    <p style="color:#0e7490;font-weight:800;letter-spacing:2px">● OPEN NOW • MON - SUN</p>
+    <h1>Your Health,<br>Our Priority.<br>Care That Feels Like Family.</h1>
+    <p>Fast, affordable and trusted healthcare in Lagos. See a doctor today - no long waiting, book in 1 minute on WhatsApp.</p>
+    <a href="#book" class="btn">Book Appointment →</a>
+    <a href="https://wa.me/2347032359029?text=Hello%20George%20Clinic%2C%20I%20need%20a%20doctor" target="_blank" class="btn-green">💬 WhatsApp Doctor</a>
+    <p style="margin-top:15px;font-weight:700;color:#0e7490">📞 Emergency? Call: +234 703 235 9029</p>
+  </div>
+  <div class="hero-img"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900&q=80" alt="Clinic"></div>
+</div>
+<div style="padding:0 6%">
+  <div class="emergency">
+    <h3 style="color:#dc2626">🚨 Emergency? We Are Open 24/7</h3>
+    <p style="margin:10px 0">Call us now for emergency care, ambulance, or urgent consultation.</p>
+    <a href="tel:+2347032359029" class="btn" style="background:#dc2626">📞 Call Emergency Now</a>
+  </div>
+</div>
+<section id="services">
+  <h2>Our Services & Prices</h2>
+  <p class="sub">Transparent prices. No hidden charges.</p>
+  <div class="grid">
+    <div class="card"><div style="font-size:40px">🩺</div><h3>General Consultation</h3><p>See a doctor for any sickness, check-up, or advice</p><div class="price">₦5,000</div><button class="btn" onclick="bookService('General Consultation')">Book Now</button></div>
+    <div class="card"><div style="font-size:40px">🦟</div><h3>Malaria Test & Treatment</h3><p>Rapid malaria test + full treatment in 30 mins</p><div class="price">₦7,500</div><button class="btn" onclick="bookService('Malaria Test')">Book Now</button></div>
+    <div class="card"><div style="font-size:40px">🩸</div><h3>Blood Test / Lab</h3><p>Full blood count, sugar test, typhoid, HIV test & more</p><div class="price">From ₦4,000</div><button class="btn" onclick="bookService('Lab Test')">Book Now</button></div>
+    <div class="card"><div style="font-size:40px">💉</div><h3>Vaccination</h3><p>For children & adults - Yellow fever, Hepatitis, Tetanus</p><div class="price">₦10,000</div><button class="btn" onclick="bookService('Vaccination')">Book Now</button></div>
+    <div class="card"><div style="font-size:40px">🤰</div><h3>Antenatal Care</h3><p>Care for pregnant mothers - scan, check-up, delivery plan</p><div class="price">₦15,000</div><button class="btn" onclick="bookService('Antenatal Care')">Book Now</button></div>
+    <div class="card"><div style="font-size:40px">🦷</div><h3>Dental Care</h3><p>Tooth pain, cleaning, extraction & check-up</p><div class="price">₦12,000</div><button class="btn" onclick="bookService('Dental Care')">Book Now</button></div>
+  </div>
+</section>
+<section id="doctors" style="background:#f8fafc">
+  <h2>Meet Our Doctors</h2>
+  <p class="sub">Experienced, caring and licensed doctors</p>
+  <div class="doc-grid">
+    <div class="doc"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80"><h3>Dr. George Chinaka</h3><p style="color:#0e7490;font-weight:700">General Physician</p><p style="color:#666;font-size:14px">10+ years experience • MBBS, Lagos</p></div>
+    <div class="doc"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80"><h3>Dr. Ada Okafor</h3><p style="color:#0e7490;font-weight:700">Paediatrician - Children</p><p style="color:#666;font-size:14px">Child specialist • 8 years experience</p></div>
+    <div class="doc"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=300&q=80"><h3>Dr. Musa Ibrahim</h3><p style="color:#0e7490;font-weight:700">Surgeon</p><p style="color:#666;font-size:14px">General surgery • 12 years experience</p></div>
+  </div>
+</section>
+<section id="book">
+  <h2>Book An Appointment</h2>
+  <p class="sub">Fill this form - it will open WhatsApp with your booking ready to send. We reply in 5 minutes.</p>
+  <div class="book-wrap">
+    <div class="book-card">
+      <h3 style="color:#0a4a5e">Book Now - 1 Minute</h3>
+      <input id="p-name" placeholder="Your Full Name">
+      <input id="p-phone" placeholder="Your Phone / WhatsApp">
+      <select id="p-service">
+        <option>General Consultation - ₦5,000</option>
+        <option>Malaria Test & Treatment - ₦7,500</option>
+        <option>Blood Test / Lab - From ₦4,000</option>
+        <option>Vaccination - ₦10,000</option>
+        <option>Antenatal Care - ₦15,000</option>
+        <option>Dental Care - ₦12,000</option>
+        <option>Emergency</option>
+      </select>
+      <select id="p-day">
+        <option>Today</option>
+        <option>Tomorrow</option>
+        <option>Next Week</option>
+      </select>
+      <textarea id="p-msg" rows="3" placeholder="What is wrong? e.g. I have fever and headache since yesterday"></textarea>
+      <button class="btn" style="width:100%;background:#25D366" onclick="bookNow()">Book on WhatsApp →</button>
+      <p style="font-size:13px;color:#888;margin-top:10px;text-align:center">No WhatsApp? Call +234 703 235 9029</p>
+    </div>
+    <div class="info-card">
+      <h3>Visit Us</h3>
+      <p style="margin:14px 0">📍 <b>Address:</b><br>15 Herbert Macaulay Rd, Ebute Metta,<br>Lagos, Nigeria</p>
+      <p>📞 <b>Phone / WhatsApp:</b><br><a href="tel:+2347032359029">+234 703 235 9029</a></p>
+      <p>✉️ <b>Email:</b><br><a href="mailto:info@georgechinakachukwuka.ng">info@georgeclinic.ng</a></p>
+      <p>🕐 <b>Opening Hours:</b><br>Mon - Fri: 8am - 9pm<br>Sat - Sun: 9am - 6pm<br>Emergency: 24/7</p>
+      <a href="https://wa.me/2347032359029?text=Hello%20George%20Clinic%2C%20I%20want%20to%20book" target="_blank" style="background:#25D366;color:#fff;padding:12px 20px;border-radius:30px;display:inline-block;margin-top:10px">💬 Chat on WhatsApp Now</a>
+      <p style="font-size:13px;opacity:.85;margin-top:15px">We accept cash, transfer, and HMO. Walk-ins welcome - no appointment needed for emergency.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div><h3>George Clinic</h3><p>Your Health, Our Priority.</p><p style="margin-top:10px">📍 15 Herbert Macaulay Rd, Ebute Metta, Lagos<br>📞 +234 703 235 9029<br>✉️ info@georgeclinic.ng</p></div>
+  <div><h3>Quick Links</h3><a href="#">Home</a><a href="#services">Services</a><a href="#doctors">Doctors</a><a href="#book">Book Appointment</a></div>
+  <div><h3>Opening Hours</h3><p>Mon - Fri: 8am - 9pm<br>Sat - Sun: 9am - 6pm<br>Emergency: 24/7</p></div>
+</footer>
+<p style="text-align:center;padding:12px;background:#083344;color:#fff;font-size:13px">© 2026 George Clinic. All rights reserved. • Lagos, Nigeria</p>
+<script>
+function bookService(s){ document.getElementById('p-service').value = s; document.getElementById('book').scrollIntoView({behavior:'smooth'}); }
+function bookNow(){
+  let n=document.getElementById('p-name').value, p=document.getElementById('p-phone').value, s=document.getElementById('p-service').value, d=document.getElementById('p-day').value, m=document.getElementById('p-msg').value;
+  if(!n||!m){ alert("Please enter your name and what is wrong"); return; }
+  let text="Hello George Clinic! I want to book:%0AName: "+n+"%0APhone: "+p+"%0AService: "+s+"%0AWhen: "+d+"%0ASymptoms: "+m;
+  window.open("https://wa.me/2347032359029?text="+encodeURIComponent(text),"_blank");
+}
+</script>  
+</body>
+</html>
